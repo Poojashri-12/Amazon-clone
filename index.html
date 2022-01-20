@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <!-- https://cdnjs.com/libraries/twitter-bootstrap/5.0.0-beta1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <!-- Icons: https://getbootstrap.com/docs/5.0/extend/icons/ -->
+    <!-- https://cdnjs.com/libraries/font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="http://pngimg.com/uploads/amazon/amazon_PNG4.png" />
+    
+    <title>Amazon clone</title>
+  </head>
+  <body>
+    
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <header>
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-xl-1">
+                    <div class="logo"><a href="#"><img src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="logo"></a></div>
+                </div>
+               
+                <div class="col-xl-8">
+                    <form action="#">
+                        <div class="world" >
+                                <span>EN</span>
+                                <i class="fa fa-globe" aria-hidden="true"></i>
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="location">
+                            <div id="icon"></div>
+                            <p id="address"></p>
+                        </div>
+                        
+                        <div class="header__search">
+                            <select class='dropdown'>
+                                <option>--Categories--</option>
+                                <option></option>
+                                <option>Greeting cards</option>
+                                <option>Baby</option>
+                                <option>Music</option>
+                                <option>Apps and Games</option>
+                                <option>Jewellery</option>
+                                <option>Cars</option>
+                                <option>Automobiles</option>
+                                <option>Groceries</option>
+                                <option>Accessories</option>
+            
+                            </select>
+                        </div>
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="search" placeholder="Search...">
+                            
+                        </div>
+                    </form>
+                </div>
+                <div class="col-xl-3">
+                    <nav>
+                        <a href="#">
+                            <span>
+                                Hello
+                            </span>
+                            <span>
+                                Sign In
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span>
+                                Returns
+                            </span>
+                            <span>
+                               & Orders
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span>
+                                Your
+                            </span>
+                            <span>
+                                Prime
+                            </span>
+                        </a>
+                        <div class="cart">
+                            <a href="#">
+                                <i class="fas fa-shopping-basket"></i>
+                            </a>
+                            <small>0</small>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div>
+                <button id="coupon" onclick="closeDiv()">
+                    <h1 class="closes">&times;</h1>
+                </button> 
+                
+            </div>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./images/slide_1.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/slide_2.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/slide_3.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./images/slide_4.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </section>
+        <section>
+            .<div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-4 mb-3">
+                        <div class="product">
+                            <div class="product__img">
+                                <img src="https://1.bp.blogspot.com/-1VT5GeEZjtg/YMsbaIuU_WI/AAAAAAAAD40/w5Af0WekI10W5AKGpGhDKIMLIfn_q566QCNcBGAsYHQ/s16000/Full%2BStack%2BWeb%2BDevelopment%2BBook.png" alt="" class="img">
+                            </div>
+                            <div class="product-info">
+                                <p><h4><b class="dark">The Full Stack Developer</b></h4><h6>Your Essential Guide to the Everyday Skills Expected of a Modern Full Stack Web Developer Paperback</h6></p>
+                            </div>
+                            <div class="product__rating">
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                            </div>
+                            <div class="product__price my-l">
+                                <h4>
+                                    <strike>
+                                    Old Price: <i class="fas fa-rupee-sign">2500</i>
+                                    </strike>
+                                </h4>
+                                <h3>
+                                    New Price: <i class="fas fa-rupee-sign">2000</i>
+                                </h3>
+                            
+
+                            </div>
+                            <div class="product-btn">
+                                <button class="color-button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 mb-3">
+                        <div class="product">
+                            <div class="product__img">
+                                <img src="https://m.media-amazon.com/images/I/61Deo+Kg6WL._SL1500_.jpg" alt="" class="img">
+                            </div>
+                            <div class="product-info">
+                                <p><h4><b class="dark">Panasonic</b></h4><h6>27L Convection Microwave Oven(NN-CT645BFDG,Black, Magic Grill)Colour-Black       , Capacity	27 litres</h6></p>
+                            </div>
+                            <div class="product__rating">
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                            </div>
+                            <div class="product__price my-l">
+                                <h4>
+                                    <strike>
+                                    Old Price: <i class="fas fa-rupee-sign">45000</i>
+                                    </strike>
+                                </h4>
+                                <h3>
+                                    New Price: <i class="fas fa-rupee-sign">43000</i>
+                                </h3>
+                            
+
+                            </div>
+                            <div class="product-btn">
+                                <button class="color-button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 mb-3">
+                        <div class="product">
+                            <div class="product__img">
+                                <img src="https://m.media-amazon.com/images/I/51E-gqtIA0L._SL1333_.jpg" alt="" class="img">
+                            </div>
+                            <div class="product-info">
+                                <p><h4><b class="dark">Vega</b></h4><h6>Galaxy Foldable 1100 Watts Hair Dryer With Heat & Cool Setting And Detachable Nozzle (VHDH-06)-Purple</h6></p>
+                            </div>
+                            <div class="product__rating">
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                                
+                            </div>
+                            <div class="product__price my-l">
+                                <h4>
+                                    <strike>
+                                    Old Price: <i class="fas fa-rupee-sign">2500</i>
+                                    </strike>
+                                </h4>
+                                <h3>
+                                    New Price: <i class="fas fa-rupee-sign">2000</i>
+                                </h3>
+                            
+
+                            </div>
+                            <div class="product-btn">
+                                <button class="color-button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <section>
+            .<div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-4 mb-3">
+                        <div class="product">
+                            <div class="product__img">
+                                <img src="https://m.media-amazon.com/images/I/619rnEyFzzL._UL1500_.jpg" alt="" class="img">
+                            </div>
+                            <div class="product-info">
+                                <p><h4><b class="dark">Frock</b></h4><h6>Women's Skater Knee length dress,Fit Type: Regular, Style: A-Line Sweetheart Neck Cold Shoulder Skater Dress</h6></p>
+                            </div>
+                            <div class="product__rating">
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                            </div>
+                            <div class="product__price my-l">
+                                <h4>
+                                    <strike>
+                                    Old Price: <i class="fas fa-rupee-sign">1500</i>
+                                    </strike>
+                                </h4>
+                                <h3>
+                                    New Price: <i class="fas fa-rupee-sign">999</i>
+                                </h3>
+                            </div>
+                            <div class="product-btn">
+                                <button class="color-button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 mb-3">
+                        <div class="product">
+                            <div class="product__img">
+                                <img src="https://m.media-amazon.com/images/I/71MxW5fXc-L._SL1500_.jpg" alt="" class="img">
+                            </div>
+                            <div class="product-info">
+                                <p><h4><b class="dark"> HP Pavilion</b></h4><h6>x360 11th Gen Intel Core i5 14-inch(35.6 cm) Touchscreen 2-in-1 FHD Laptop (16GB/512GB SSD/Fingerprint Reader/Windows 10/MS Office/Natural Silver/1.41 Kg), 14-dy0053TU</h6></p>
+                            </div>
+                            <div class="product__rating">
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                            </div>
+                            <div class="product__price my-l">
+                                <h4>
+                                    <strike>
+                                    Old Price: <i class="fas fa-rupee-sign">75000</i>
+                                    </strike>
+                                </h4>
+                                <h3>
+                                    New Price: <i class="fas fa-rupee-sign">74500</i>
+                                </h3>
+                            
+
+                            </div>
+                            <div class="product-btn">
+                                <button class="color-button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 mb-3">
+                        <div class="product">
+                            <div class="product__img">
+                                <img src="https://m.media-amazon.com/images/I/61t2Qq5TG8L._SL1000_.jpg" alt="" class="img">
+                            </div>
+                            <div class="product-info">
+                                <p><h4><b class="dark">Lakme</b></h4><h6>Absolute Skin Natural Mousse, Ivory Fair 01, With Spf, Light Texture , Stays Upto 16 Hours, 25 g</h6></p>
+                            </div>
+                            <div class="product__rating">
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                            </div>
+                            <div class="product__price my-l">
+                                <h4>
+                                    <strike>
+                                    Old Price: <i class="fas fa-rupee-sign">2500</i>
+                                    </strike>
+                                </h4>
+                                <h3>
+                                    New Price: <i class="fas fa-rupee-sign">2000</i>
+                                </h3>
+                            
+
+                            </div>
+                            <div class="product-btn">
+                                <button class="color-button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <section>
+            .<div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-4 mb-3">
+                        <div class="product">
+                            <div class="product__img">
+                                <img src="https://m.media-amazon.com/images/I/61mKoHH2rsL._SL1000_.jpg" alt="" class="img">
+                            </div>
+                            <div class="product-info">
+                                <p><h4><b class="dark">Ferrero Rocher</b></h4><h6>Premium Chocolates 24 Pieces, 300 g,Allergen Information	Dairy,                  Diet Type-Vegetarian, Package Weight-0.56 Kilograms</h6></p>
+                            </div>
+                            <div class="product__rating">
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                            </div>
+                            <div class="product__price my-l">
+                                <h4>
+                                    <strike>
+                                    Old Price: <i class="fas fa-rupee-sign">2500</i>
+                                    </strike>
+                                </h4>
+                                <h3>
+                                    New Price: <i class="fas fa-rupee-sign">2000</i>
+                                </h3>
+                            
+
+                            </div>
+                            <div class="product-btn">
+                                <button class="color-button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 mb-3">
+                        <div class="product">
+                            <div class="product__img">
+                                <img src="https://tse2.mm.bing.net/th/id/OIP.wJ2vHgfQXpI2mSdNN-EkxwHaFl?pid=ImgDet&rs=1" alt="" class="img">
+                            </div>
+                            <div class="product-info">
+                                <p><h4><b class="dark">Amazon Brand</b></h4><h6>Solimo Neptune Engineered Wood Queen Wenge Finish Bed with Storage (Brown)</h6></p>
+                            </div>
+                            <div class="product__rating">
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                            </div>
+                            <div class="product__price my-l">
+                                <h4>
+                                    <strike>
+                                    Old Price: <i class="fas fa-rupee-sign">16900</i>
+                                    </strike>
+                                </h4>
+                                <h3>
+                                    New Price: <i class="fas fa-rupee-sign">16000</i>
+                                </h3>
+                            
+
+                            </div>
+                            <div class="product-btn">
+                                <button class="color-button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 mb-3">
+                        <div class="product">
+                            <div class="product__img">
+                                <img src="https://m.media-amazon.com/images/I/51ghTMUoj4L.jpg" alt="" class="img">
+                            </div>
+                            <div class="product-info">
+                                <p><h4><b class="dark">Patiofy</b></h4><h6>Made in India Premium Square Shape Hammock Hanging Cotton Swing Chair with Cushion & Accessories</h6></p>
+                            </div>
+                            <div class="product__rating">
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                                <i class="fas fa-star checked"></i>
+                            </div>
+                            <div class="product__price my-l">
+                                <h4>
+                                    <strike>
+                                    Old Price: <i class="fas fa-rupee-sign">10000</i>
+                                    </strike>
+                                </h4>
+                                <h3>
+                                    New Price: <i class="fas fa-rupee-sign">7350</i>
+                                </h3>
+                            
+
+                            </div>
+                            <div class="product-btn">
+                                <button class="color-button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+    <footer>
+        <h3 style="text-align:center">&copy; Pooja Shri </h3>
+    </footer>
+    <script src="style.js"></script>
+    <script>
+        window.onload=test()
+   </script>
+   <script>
+        
+    var y = document.getElementById("address")
+    var z =  document.getElementById('icon')
+    function geolocation(){
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(showPosition)
+        }else{
+            x.innerText="Geo Not Supported"
+        }
+    }
+
+    function showPosition(data){
+        console.log(data)
+        let lat = data.coords.latitude;
+        let long = data.coords.longitude
+        var url = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${long}&mode=json&units=metric&cnt=1&appid=fbf712a5a83d7305c3cda4ca8fe7ef29`
+        fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data)                 
+            data.list.map((item) => {
+                console.log(item.temp.day)
+                y.innerText=`${item.temp.day}°C and ${item.weather[0].description}`
+                z.innerHTML=`<img class='card-img-top' src='https://openweathermap.org/img/w/${item.weather[0].icon}.png' alt='weather'/>`
+            })
+            
+        })
+    }
+    window.onload=geolocation()
+</script>
+  </body>
+</html>
+
